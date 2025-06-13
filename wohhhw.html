@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mulindwa Julius - Personal Website</title>
+  <style>
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -500px 0; }
+      100% { background-position: 500px 0; }
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 10px white; }
+      50% { box-shadow: 0 0 25px white; }
+      100% { box-shadow: 0 0 10px white; }
+    }
+
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes floating {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    body {
+      background: linear-gradient(270deg, red, pink, violet, blue, yellow, orange);
+      background-size: 1200% 1200%;
+      animation: backgroundShift 20s ease infinite;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    .card {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: 50px auto;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      animation: slideIn 1s ease forwards, floating 5s ease-in-out infinite;
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite, glowPulse 3s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    h1, h2, p, .contact {
+      opacity: 0;
+      animation: fadeInText 1s forwards;
+    }
+
+    h1 {
+      animation-delay: 1.2s;
+      font-size: 36px;
+      background: linear-gradient(90deg, white, yellow, orange, pink, violet);
+      background-size: 300%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation-name: fadeInText, shimmer;
+      animation-duration: 1s, 3s;
+      animation-delay: 1.2s, 2s;
+      animation-iteration-count: 1, infinite;
+      animation-fill-mode: forwards;
+      background-position: -500px 0;
+    }
+
+    h2 {
+      animation-delay: 1.6s;
+      font-size: 22px;
+      color: yellow;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid yellow;
+      width: 0;
+      animation-name: typewriter;
+      animation-duration: 4s;
+      animation-timing-function: steps(40, end);
+      animation-fill-mode: forwards;
+    }
+
+    p {
+      animation-delay: 2s;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .contact {
+      margin-top: 20px;
+      animation-delay: 2.4s;
+    }
+
+    @keyframes fadeInText {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .contact a {
+      color: lightblue;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    audio {
+      margin-top: 20px;
+      filter: drop-shadow(0 0 4px white);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Music with visible controls -->
+  <audio id="backgroundMusic" controls autoplay loop>
+    <source src="wanula.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="card">
+    <img src="JULIUS.png" alt="Mulindwa Julius" />
+    <h1>Mulindwa Julius</h1>
+    <h2>Profession: Student & Future ICT Technician</h2>
+    <p>I love Bible reading and prayer. I believe in using technology for good and helping others learn ICT skills.</p>
+
+    <div class="contact">
+      <p>Email: <a href="mailto:maxjax659@gmail.com">maxjax659@gmail.com</a></p>
+      <p>Phone: <a href="tel:+256708647852">0708647852</a></p>
+      <p>School: St. Paul and Pauline SSS, Gayaza, Masaka</p>
+    </div>
+  </div>
+
+</body>
+</html>
